@@ -1,9 +1,7 @@
 import "./Aboutme.css"
 import Nav from "./Component/Nav.jsx";
 
-
 function Aboutme() {
-
     return (
         <div>
             <Nav/>
