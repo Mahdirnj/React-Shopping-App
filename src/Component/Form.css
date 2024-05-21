@@ -1,0 +1,23 @@
+form {
+    text-align: center;
+    background: #8f9075;
+    border-radius: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: solid thin lightyellow;
+}
+
+form input {
+    background: darkgray;
+    border-radius: 20px;
+    color: floralwhite;
+}
+
+form input {
+    text-align: center;
+    color: white;
+}
+
+label {
+    color: floralwhite;
+}

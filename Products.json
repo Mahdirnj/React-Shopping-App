@@ -1,0 +1,62 @@
+{
+  "Bottle": {
+    "id": 1,
+    "name": "Bottle",
+    "href": "#",
+    "price": "$48",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg",
+    "imageAlt": "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
+    "description": "A tall slender porcelain bottle with a natural clay textured body and a cork stopper."
+  },
+  "Tumbler": {
+    "id": 2,
+    "name": "Tumbler",
+    "href": "#",
+    "price": "$35",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg",
+    "imageAlt": "Olive drab green insulated bottle with flared screw lid and flat top.",
+    "description": "An olive drab green insulated bottle with a flared screw lid and flat top."
+  },
+  "Paper Refill": {
+    "id": 3,
+    "name": "Paper Refill",
+    "href": "#",
+    "price": "$89",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg",
+    "imageAlt": "Person using a pen to cross a task off a productivity paper card.",
+    "description": "Refill your productivity planner with these paper refills."
+  },
+  "Pencil": {
+    "id": 4,
+    "name": "Pencil",
+    "href": "#",
+    "price": "$35",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg",
+    "imageAlt": "Hand holding black machined steel mechanical pencil with brass tip and top.",
+    "description": "A black machined steel mechanical pencil with a brass tip and top."
+  },
+  "React": {
+    "id": 5,
+    "name": "React Course",
+    "href": "#",
+    "price": "$89",
+    "imageSrc": "src/assets/react.svg",
+    "description": "React.js course for everyone who likes learn react."
+  },
+  "Beach": {
+    "id": 6,
+    "name": "Beach Tour",
+    "href": "#",
+    "price": "$350",
+    "imageSrc": "src/assets/Beach.jpg",
+    "description": "A beautiful beach tour."
+  },
+  "Pen": {
+    "id": 7,
+    "name": "Pen",
+    "href": "#",
+    "price": "$14",
+    "imageSrc": "src/assets/images.jpg",
+    "description": "A sleek pen for all your writing needs."
+  }
+}

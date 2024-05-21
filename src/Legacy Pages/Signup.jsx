@@ -1,6 +1,6 @@
 import "./Signup.css"
-import SocialButton from "./Component/SocialButton.jsx";
-import Nav from "./Component/Nav.jsx";
+import SocialButton from "./SocialButton.jsx";
+import Nav from "./Nav.jsx";
 
 function Signup() {
 
