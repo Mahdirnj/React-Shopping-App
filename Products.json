@@ -1,62 +1,121 @@
-{
-  "Bottle": {
+[
+  {
     "id": 1,
     "name": "Bottle",
     "href": "#",
-    "price": "$48",
-    "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg",
-    "imageAlt": "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
-    "description": "A tall slender porcelain bottle with a natural clay textured body and a cork stopper."
+    "price": "$48.00",
+    "description": "A tall slender porcelain bottle with a natural clay textured body and a cork stopper.",
+    "images": [
+      {
+        "alt": "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
+        "src": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg"
+      },
+      {
+        "alt": "Alternate view of the tall slender porcelain bottle.",
+        "src": "src/assets/bottle 2.jpg"
+      }
+    ]
   },
-  "Tumbler": {
+  {
     "id": 2,
     "name": "Tumbler",
     "href": "#",
-    "price": "$35",
-    "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg",
-    "imageAlt": "Olive drab green insulated bottle with flared screw lid and flat top.",
-    "description": "An olive drab green insulated bottle with a flared screw lid and flat top."
+    "price": "$35.00",
+    "description": "An olive drab green insulated bottle with a flared screw lid and flat top.",
+    "images": [
+      {
+        "alt": "Olive drab green insulated bottle with flared screw lid and flat top.",
+        "src": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg"
+      },
+      {
+        "alt": "Alternate view of the olive drab green insulated bottle.",
+        "src": "src/assets/bottle 4.jpg"
+      }
+    ]
   },
-  "Paper Refill": {
+  {
     "id": 3,
     "name": "Paper Refill",
     "href": "#",
-    "price": "$89",
-    "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg",
-    "imageAlt": "Person using a pen to cross a task off a productivity paper card.",
-    "description": "Refill your productivity planner with these paper refills."
+    "price": "$89.00",
+    "description": "Refill your productivity planner with these paper refills.",
+    "images": [
+      {
+        "alt": "Person using a pen to cross a task off a productivity paper card.",
+        "src": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg"
+      },
+      {
+        "alt": "Alternate view of the productivity paper card.",
+        "src": "src/assets/note 2.jpg"
+      }
+    ]
   },
-  "Pencil": {
+  {
     "id": 4,
     "name": "Pencil",
     "href": "#",
-    "price": "$35",
-    "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg",
-    "imageAlt": "Hand holding black machined steel mechanical pencil with brass tip and top.",
-    "description": "A black machined steel mechanical pencil with a brass tip and top."
+    "price": "$35.00",
+    "description": "A black machined steel mechanical pencil with a brass tip and top.",
+    "images": [
+      {
+        "alt": "Hand holding black machined steel mechanical pencil with brass tip and top.",
+        "src": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg"
+      },
+      {
+        "alt": "Alternate view of the black machined steel mechanical pencil.",
+        "src": "src/assets/pencil 2.jpg"
+      }
+    ]
   },
-  "React": {
+  {
     "id": 5,
     "name": "React Course",
     "href": "#",
-    "price": "$89",
-    "imageSrc": "src/assets/react.svg",
-    "description": "React.js course for everyone who likes learn react."
+    "price": "$89.00",
+    "description": "React.js course for everyone who likes to learn react.",
+    "images": [
+      {
+        "alt": "React.js course for everyone who likes to learn react.",
+        "src": "src/assets/react.svg"
+      },
+      {
+        "alt": "React.js course for everyone who likes to learn react.",
+        "src": "src/assets/React_Native_Logo.png"
+      }
+    ]
   },
-  "Beach": {
+  {
     "id": 6,
     "name": "Beach Tour",
     "href": "#",
-    "price": "$350",
-    "imageSrc": "src/assets/Beach.jpg",
-    "description": "A beautiful beach tour."
+    "price": "$350.00",
+    "description": "A beautiful beach tour.",
+    "images": [
+      {
+        "alt": "A beautiful beach tour.",
+        "src": "src/assets/Beach.jpg"
+      },
+      {
+        "alt": "Alternate image for the beach tour.",
+        "src": "src/assets/beach 2.jpg"
+      }
+    ]
   },
-  "Pen": {
+  {
     "id": 7,
     "name": "Pen",
     "href": "#",
-    "price": "$14",
-    "imageSrc": "src/assets/images.jpg",
-    "description": "A sleek pen for all your writing needs."
+    "price": "$14.00",
+    "description": "A sleek pen for all your writing needs.",
+    "images": [
+      {
+        "alt": "A sleek pen for all your writing needs.",
+        "src": "src/assets/images.jpg"
+      },
+      {
+        "alt": "Alternate view of the sleek pen.",
+        "src": "src/assets/pen2.jpg"
+      }
+    ]
   }
-}
+]

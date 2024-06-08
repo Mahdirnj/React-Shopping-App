@@ -1,14 +1,15 @@
-import "../assets/index.css"
+import "../assets/index.css";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import ProductDetail from './ProductDetail';
+import {Helmet} from "react-helmet";
 
 function ShopItem() {
     const [Products, setProducts] = useState(null);
     const [selectedProduct, setSelectedProduct] = useState(null);
 
     useEffect(() => {
-        axios.get("../Products.json")
+        axios.get("http://localhost:3001/api/products")
             .then(res => {
                 setProducts(res.data);
             })
@@ -27,6 +28,9 @@ function ShopItem() {
 
     return (
         <div>
+            <Helmet>
+                <title>Signup</title>
+            </Helmet>
             <div className="bg-white w-auto h-auto">
                 <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
                     <h2 className="sr-only">Products</h2>
@@ -38,13 +42,13 @@ function ShopItem() {
                                 <div
                                     className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-50 mb-9 h-64 xl:aspect-h-8 xl:aspect-w-7">
                                     <img
-                                        src={product.imageSrc}
-                                        alt={product.imageAlt}
+                                        src={product.images[0].src}
+                                        alt={product.images[0].alt}
                                         className="h-full w-full object-cover object-center mb-auto group-hover:opacity-75"
                                     />
                                 </div>
                                 <h3 className="text-sm text-gray-700 font-bold">{product.name}</h3>
-                                <p className="mt-5 text-lg text-center font-medium text-gray-900">{product.price}</p>
+                                <p className="mt-5 text-lg text-center font-medium text-gray-900">{product.price} $</p>
                             </div>
                         ))}
                     </div>

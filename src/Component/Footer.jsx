@@ -1,6 +1,8 @@
 import "../assets/index.css"
+import {useNavigate} from "react-router-dom";
 
 function Footer() {
+    const navigate = useNavigate();
     return (
         <footer className="bg-white rounded-lg shadow dark:bg-gray-800 ">
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
@@ -22,7 +24,7 @@ function Footer() {
                             <a href="#" className="hover:underline me-4 md:me-6">Licensing</a>
                         </li>
                         <li>
-                            <a href="#" className="hover:underline">Contact</a>
+                            <a className="hover:underline">Contact</a>
                         </li>
                     </ul>
                 </div>

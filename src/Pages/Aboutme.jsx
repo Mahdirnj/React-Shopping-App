@@ -1,10 +1,14 @@
 import "../assets/index.css"
 import CorpInfo from "../Component/CorpInfo.jsx";
 import Stats from "../Component/Stats.jsx";
+import {Helmet} from "react-helmet";
 
 function Aboutme() {
     return (
         <div className="bg-gray-900 pt-7">
+            <Helmet>
+                <title>About</title>
+            </Helmet>
             <h1 className=" text-center mb-5 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Welcome
                 to <mark
                     className=" px-2 text-white bg-blue-700 rounded dark:bg-blue-900 ">reShop</mark> intro page

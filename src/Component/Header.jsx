@@ -50,7 +50,7 @@ function Header() {
                                         />
                                     </div>
                                     <div className="w-11/12 hidden sm:ml-6 sm:block ">
-                                        <div className="w-11/12 flex space-x-4 justify-center">
+                                        <div className="ml-16 w-11/12 flex space-x-4 justify-center">
                                             {navigation.map((item) => (
                                                 <a
                                                     onClick={() => {

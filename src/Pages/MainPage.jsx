@@ -3,12 +3,15 @@ import DataAnalystSVG from "../Component/DataAnalystSVG.jsx";
 import MainIntro from "../Component/Main-Intro.jsx";
 import Timeline from "../Component/Timeline.jsx";
 import FeatureSection from "../Component/Feature-section.jsx";
-import Stats from "../Component/Stats.jsx";
-import Button from "../Component/Button.jsx";
+import {Helmet} from "react-helmet";
 
 function MainPage() {
     return (
         <div>
+            <Helmet>
+                <title>Home</title>
+                <link rel="icon" href="../assets/Homefav.png"/>
+            </Helmet>
             <div className="bg-gray-800 text-white dark:bg-gray-900 dark:text-white ">
                 <div className="transform">
                     <MainIntro/>
@@ -63,15 +66,17 @@ function MainPage() {
                         className="ms-2 font-semibold text-gray-500 dark:text-gray-400">The road map</small></h1>
                     <Timeline/>
                 </div>
-                <div className="mt-10 mb-5 ">
-                    <DataAnalystSVG PhotoInside={"src/assets/stats.jpg"}/>
+                <div className="mt-10 ">
+                    <div className="pb-7">
+                        <DataAnalystSVG PhotoInside={"src/assets/stats.jpg"}/>
+                    </div>
                 </div>
-                <Stats fHead={"Happy users"} fDesc={"94%"} secHead={"Up time"} secDesc={"99.99 %"} thrdHead={""}
-                       thrdDesc={""}/>
-                <br/>
-                <div className="flex justify-center mt-0">
-                    <Button Buttomtext={"Click here to add counter"}/>
-                </div>
+                {/*<Stats fHead={"Happy users"} fDesc={"94%"} secHead={"Up time"} secDesc={"99.99 %"} thrdHead={""}*/}
+                {/*       thrdDesc={""}/>*/}
+                {/*<br/>*/}
+                {/*<div className="flex justify-center mt-0">*/}
+                {/*    <Button Buttomtext={"Click here to add counter"}/>*/}
+                {/*</div>*/}
             </div>
         </div>
     )

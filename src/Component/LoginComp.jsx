@@ -1,11 +1,14 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import Alert from './Alert'; // Adjust the import path as necessary
+import {useNavigate} from 'react-router-dom';
+import Alert from './Alert';
+import {Button} from "flowbite-react";
 
 function LoginComp() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [alert, setAlert] = useState({show: false, Boldtxt: '', Infotxt: '', AlertType: ''});
+    const navigate = useNavigate();
 
     const handleUsernameChange = (e) => {
         setUsername(e.target.value);
@@ -14,23 +17,35 @@ function LoginComp() {
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
     };
+    const handleSignup = () => {
+        navigate('/Signup');
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.get('../UserData.json')
             .then((response) => {
                 const usersData = response.data;
-                // Find user by username
                 const user = Object.values(usersData).find(user => user.username === username);
 
                 if (user) {
                     if (user.password === password) {
                         setAlert({show: true, Boldtxt: 'Success!', Infotxt: 'Login successful.', AlertType: 'success'});
+                        // eslint-disable-next-line no-global-assign
+                        Name = user.name;
+                        setTimeout(() => {
+                            navigate('/dashboard');
+                        }, 2000);
                     } else {
                         setAlert({show: true, Boldtxt: 'Error!', Infotxt: 'Incorrect password.', AlertType: 'error'});
                     }
                 } else {
-                    setAlert({show: true, Boldtxt: 'Error!', Infotxt: 'Username does not exist.', AlertType: 'error'});
+                    setAlert({
+                        show: true,
+                        Boldtxt: 'Attention!',
+                        Infotxt: 'Username does not exist.',
+                        AlertType: 'info'
+                    });
                 }
             })
             .catch((error) => {
@@ -46,7 +61,6 @@ function LoginComp() {
 
     return (
         <div>
-
             <section className="bg-gray-50 dark:bg-gray-900">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16">
                     <div className="flex flex-col justify-center">
@@ -81,13 +95,9 @@ function LoginComp() {
                                 <div>
                                     {alert.show && <Alert Boldtxt={alert.Boldtxt} Infotxt={alert.Infotxt}
                                                           AlertType={alert.AlertType}/>}
-                                    {/*<input onChange={handleUsernameChange} type="email" name="email" id="email-login"*/}
-                                    {/*       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"*/}
-                                    {/*       placeholder="name@company.com" required/>*/}
                                     <div className="relative z-0">
                                         <input autoComplete={"off"} onChange={handleUsernameChange} type="email"
-                                               name="email"
-                                               id="email-login"
+                                               name="email" id="email-login"
                                                className="block py-2.5 px-0 w-full text-sm text-gray-300 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                                placeholder=" "/>
                                         <label htmlFor="email"
@@ -109,9 +119,11 @@ function LoginComp() {
                                         className="w-full px-5 ml-40 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 sm:w-auto dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     Login to your account
                                 </button>
-                                <div className="text-sm font-medium align-middle ml-40 text-gray-900 dark:text-white">
-                                    Not registered yet? <a className="text-blue-600 hover:underline dark:text-blue-500">Create
-                                    account</a>
+                                <div
+                                    className="text-sm  font-medium align-middle ml-40  flex text-gray-900 dark:text-white">
+                                    Not registered yet? <Button onClick={handleSignup}
+                                                                className="bg-gray-700 hover:bg-gray-900 text-blue-600 hover:underline  dark:text-blue-500 ml-3 py-2">Create
+                                    account</Button>
                                 </div>
                             </form>
                         </div>
